@@ -11,9 +11,12 @@
     .config(function(){
       //configuration
     })
-    .run(function($rootScope, APP_VERSION){
+    .run(['$rootScope', 'APP_VERSION', function($rootScope, APP_VERSION){
       //initialize
+
+      //rootScope is the global scope.
+      //The appVersion variable can be accessed from anywhere
       $rootScope.appVersion = APP_VERSION;
-    });
+    }]);
 })();
 

@@ -30,9 +30,17 @@
       {{characterVersion}}
     </h4>
 
-    <p>
-      {{bookService}}
-    </p>
+    <div>
+      <h3>Book Service</h3>
+      <ul ng-repeat="book in books">
+        <li>
+          Title: {{book.title}}
+        </li>
+        <li>
+          Author: {{book.author}}
+        </li>
+      </ul>
+    </div>
 
   </div>
 

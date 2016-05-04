@@ -16,6 +16,6 @@
 
     $scope.characterVersion = CharacterVersionFactory;
 
-    $scope.bookService = BookService.getBooks();
+    $scope.books = BookService.getBooks();
   }]);
 })();

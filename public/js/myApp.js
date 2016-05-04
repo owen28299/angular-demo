@@ -11,8 +11,9 @@
     .config(function(){
       //configuration
     })
-    .run(function(){
+    .run(function($rootScope, APP_VERSION){
       //initialize
+      $rootScope.appVersion = APP_VERSION;
     });
 })();
 

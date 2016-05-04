@@ -6,10 +6,11 @@
 </head>
 <body ng-app="myApp">
   <h1>{{"Hello " + "Angular"}}</h1>
+  <h2>{{appVersion}}</h2>
+
   <div>
     {{2 + 3}}
   </div>
-
 
   <div ng-controller="myController">
     <div>
@@ -22,7 +23,7 @@
     {{myFirstName}}
 
     <h3>
-      {{MainCharacter}}
+      {{mainCharacter}}
     </h3>
   </div>
 
@@ -30,5 +31,6 @@
   <script type="text/javascript" src="/js/myApp.js"></script>
   <script type="text/javascript" src="/js/controllers.js"></script>
   <script type="text/javascript" src="/js/values.js"></script>
+  <script type="text/javascript" src="/js/constants.js"></script>
 </body>
 </html>

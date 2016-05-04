@@ -1,3 +1,7 @@
-var app = angular.module('myApp');
+'use strict';
 
-app.value('MainCharacter', 'Archer');
+(function(){
+  var app = angular.module('myApp');
+  app.value('MainCharacter', 'Archer');
+})();
+

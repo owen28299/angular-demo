@@ -10,6 +10,6 @@
 
     $scope.myModel = 'Mochi';
 
-    $scope.MainCharacter = MainCharacter;
+    $scope.mainCharacter = MainCharacter;
   }]);
 })();

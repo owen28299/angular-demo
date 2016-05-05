@@ -32,7 +32,8 @@
 
     <div>
       <h3>Book Service</h3>
-      <ul ng-repeat="book in BookService.getBooks()">
+      <input type="text" ng-model="searchBookFilter" placeholder="search books"></input>
+      <ul ng-repeat="book in BookService.getBooks() | filter:searchBookFilter">
         <li>
           Title: {{book.title}}
         </li>

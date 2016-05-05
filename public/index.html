@@ -3,14 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <title>Angular Demo App</title>
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
 </head>
 <body ng-app="myApp">
+
+  <nav>
+    <ul>
+      <li><a ng-href="/">Home</a></li>
+      <li><a ng-href="/books">Books</a></li>
+      <li><a ng-href="/movies">Movies</a></li>
+      <li><a ng-href="/other">Other</a></li>
+    </ul>
+  </nav>
 
   <!-- route provider renders views in here -->
   <div ng-view></div>
 
+
+
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-route.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-animate.min.js"></script>
   <script type="text/javascript" src="/js/myApp.js"></script>
   <script type="text/javascript" src="/js/controllers.js"></script>
   <script type="text/javascript" src="/js/values.js"></script>
@@ -19,8 +32,8 @@
   <script type="text/javascript" src="/js/services.js"></script>
   <script type="text/javascript" src="/js/providers.js"></script>
   <script type="text/javascript" src="/js/filters.js"></script>
-  <script type="text/javascript" src="/js/books.js"></script>
-  <script type="text/javascript" src="/js/movies.js"></script>
-  <script type="text/javascript" src="/js/other.js"></script>
+  <script type="text/javascript" src="/js/controllers/books.js"></script>
+  <script type="text/javascript" src="/js/controllers/movies.js"></script>
+  <script type="text/javascript" src="/js/controllers/other.js"></script>
 </body>
 </html>

@@ -2,19 +2,30 @@
 
 (function(){
   //creation uses a 2nd array argument to import dependencies.
-  angular.module('myApp', []);
+  angular.module('myApp', ['ngRoute']);
 
   //this is retrieval - it will create myApp
   var myApp = angular.module('myApp');
 
   myApp
-    .config(['MoviesProvider', function(MoviesProvider){
+    .config(['MoviesProvider',
+      '$routeProvider',
+    function(MoviesProvider, $routeProvider){
       //configuration
       MoviesProvider.setEndpoint('/api/movies');
+
+      $routeProvider
+        .when('/', {
+          templateUrl : 'views/default.html'
+        })
+        .when('/books', {
+          templateUrl : 'views/books.html',
+          controller  : 'BooksController'
+        });
     }])
     .run(['$rootScope',
       'APP_VERSION',
-      function($rootScope, APP_VERSION){
+    function($rootScope, APP_VERSION){
       //initialize
 
       //rootScope is the global scope.

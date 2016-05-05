@@ -5,12 +5,9 @@
   <title>Angular Demo App</title>
 </head>
 <body ng-app="myApp">
-  <h1>{{"Hello " + "Angular"}}</h1>
-  <h2>{{appVersion}}</h2>
 
-  <div>
-    {{2 + 3}}
-  </div>
+  <!-- route provider renders views in here -->
+  <div ng-view></div>
 
   <div ng-controller="myController">
     <div>
@@ -30,48 +27,21 @@
       {{characterVersion}}
     </h4>
 
-    <div>
-      <h3>Book Service</h3>
-      <input type="text" ng-model="searchBookFilter" placeholder="search books"></input>
-      <ul ng-repeat="book in BookService.getBooks() | filter:searchBookFilter">
-        <li>
-          Title: {{book.title}}
-        </li>
-        <li>
-          Author: {{book.author}}
-        </li>
-      </ul>
-    </div>
-
-    <fieldset>
-      <div>
-        <label for="Title">Title</label>
-        <input type="text" id="Title" ng-model="newBook.title">
-      </div>
-      <div>
-        <label for="Author">Author</label>
-        <input type="text" id="Author" ng-model="newBook.author">
-      </div>
-      <div>
-        <button ng-click="BookService.addBook(newBook)">Add Book</button>
-      </div>
-    </fieldset>
-
-    <div>
-      <h2>Movies</h2>
-      <ul ng-repeat="movie in movies | beforeYearFilter:1983">
-        <li>
-          Title: {{movie.title}}
-        </li>
-        <li>
-          Year: {{movie.year}}
-        </li>
+       <h2>Movies</h2>
+       <ul ng-repeat="movie in movies | beforeYearFilter:1983 | orderBy:'-year'">
+         <li>
+           Title: {{movie.title}}
+         </li>
+         <li>
+           Year: {{movie.year}}
+         </li>
       </ul>
     </div>
 
   </div>
 
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-route.min.js"></script>
   <script type="text/javascript" src="/js/myApp.js"></script>
   <script type="text/javascript" src="/js/controllers.js"></script>
   <script type="text/javascript" src="/js/values.js"></script>
@@ -80,5 +50,6 @@
   <script type="text/javascript" src="/js/services.js"></script>
   <script type="text/javascript" src="/js/providers.js"></script>
   <script type="text/javascript" src="/js/filters.js"></script>
+  <script type="text/javascript" src="/js/books.js"></script>
 </body>
 </html>

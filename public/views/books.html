@@ -1,0 +1,28 @@
+<div>
+  <h3>Book Service</h3>
+  <input type="text" ng-model="searchBookFilter" placeholder="search books"></input>
+  <ul ng-repeat="book in BookService.getBooks() | filter:searchBookFilter | orderBy:'title'">
+    <li>
+      Title: {{book.title}}
+    </li>
+    <li>
+      Author: {{book.author}}
+    </li>
+  </ul>
+</div>
+
+<fieldset>
+  <div>
+    <label for="Title">Title</label>
+    <input type="text" id="Title" ng-model="newBook.title">
+  </div>
+  <div>
+    <label for="Author">Author</label>
+    <input type="text" id="Author" ng-model="newBook.author">
+  </div>
+  <div>
+    <button ng-click="BookService.addBook(newBook)">Add Book</button>
+  </div>
+</fieldset>
+
+<div>

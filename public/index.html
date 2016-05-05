@@ -27,15 +27,6 @@
       {{characterVersion}}
     </h4>
 
-       <h2>Movies</h2>
-       <ul ng-repeat="movie in movies | beforeYearFilter:1983 | orderBy:'-year'">
-         <li>
-           Title: {{movie.title}}
-         </li>
-         <li>
-           Year: {{movie.year}}
-         </li>
-      </ul>
     </div>
 
   </div>
@@ -51,5 +42,6 @@
   <script type="text/javascript" src="/js/providers.js"></script>
   <script type="text/javascript" src="/js/filters.js"></script>
   <script type="text/javascript" src="/js/books.js"></script>
+  <script type="text/javascript" src="/js/movies.js"></script>
 </body>
 </html>

@@ -21,6 +21,10 @@
         .when('/books', {
           templateUrl : 'views/books.html',
           controller  : 'BooksController'
+        })
+        .when('/movies', {
+          templateUrl : 'views/movies.html',
+          controller  : 'MoviesController'
         });
     }])
     .run(['$rootScope',

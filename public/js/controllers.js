@@ -22,12 +22,5 @@
 
     $scope.characterVersion = CharacterVersionFactory;
 
-    $scope.BookService = BookService;
-
-    $scope.movies = [];
-    Movies.getMovies().then(function(response){
-      $scope.movies = response.data;
-    });
-
   }]);
 })();

@@ -32,7 +32,7 @@
 
     <div>
       <h3>Book Service</h3>
-      <ul ng-repeat="book in books">
+      <ul ng-repeat="book in BookService.getBooks()">
         <li>
           Title: {{book.title}}
         </li>
@@ -41,6 +41,20 @@
         </li>
       </ul>
     </div>
+
+    <fieldset>
+      <div>
+        <label for="Title">Title</label>
+        <input type="text" id="Title" ng-model="newBook.title">
+      </div>
+      <div>
+        <label for="Author">Author</label>
+        <input type="text" id="Author" ng-model="newBook.author">
+      </div>
+      <div>
+        <button ng-click="BookService.addBook(newBook)">Add Book</button>
+      </div>
+    </fieldset>
 
   </div>
 

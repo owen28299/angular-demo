@@ -30,6 +30,12 @@
 
     ];
 
+    this.nextId = function(){
+      return this.books.reduce(function(highest, book){
+        return Math.max(book.id, highest);
+      }, 0) + 1;
+    };
+
     this.getBooks = function(){
       return this.books;
     };
@@ -41,6 +47,16 @@
       .reduce(function(p,c){
         return c;
       }, null);
+    };
+
+    this.addBook = function(book){
+      this.books.push(Object.assign({
+        id : this.nextId()
+      }, book)); //like a mixin, adds the properties of book to the object in the first argument
+      Object.assign(book, {
+        title: "",
+        author: ""
+      });
     };
 
 

@@ -25,6 +25,10 @@
         .when('/movies', {
           templateUrl : 'views/movies.html',
           controller  : 'MoviesController'
+        })
+        .when('/other', {
+          templateUrl : 'views/other.html',
+          controller  : 'OtherController'
         });
     }])
     .run(['$rootScope',

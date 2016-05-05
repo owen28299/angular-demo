@@ -8,9 +8,10 @@
   var myApp = angular.module('myApp');
 
   myApp
-    .config(function(){
+    .config(['MoviesProvider', function(MoviesProvider){
       //configuration
-    })
+      MoviesProvider.setEndpoint('/api/movies');
+    }])
     .run(['$rootScope', 'APP_VERSION', function($rootScope, APP_VERSION){
       //initialize
 

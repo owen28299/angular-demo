@@ -5,8 +5,12 @@
 
   //$scope in array format is necessary if minifying this file
   myApp.controller('myController',
-    ['$scope', 'MainCharacter', 'CharacterVersionFactory', 'BookService',
-    function($scope, MainCharacter, CharacterVersionFactory, BookService){
+    ['$scope',
+    'MainCharacter',
+    'CharacterVersionFactory',
+    'BookService',
+    'Movies',
+    function($scope, MainCharacter, CharacterVersionFactory, BookService, Movies){
     //attach model to scope
     $scope.myFirstName = 'Owen';
 
@@ -17,6 +21,8 @@
     $scope.characterVersion = CharacterVersionFactory;
 
     $scope.BookService = BookService;
+
+    console.log(Movies.getMovies());
 
   }]);
 })();

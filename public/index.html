@@ -58,7 +58,7 @@
 
     <div>
       <h2>Movies</h2>
-      <ul ng-repeat="movie in movies | filter:year=1983">
+      <ul ng-repeat="movie in movies | beforeYearFilter:1983">
         <li>
           Title: {{movie.title}}
         </li>
@@ -78,5 +78,6 @@
   <script type="text/javascript" src="/js/factories.js"></script>
   <script type="text/javascript" src="/js/services.js"></script>
   <script type="text/javascript" src="/js/providers.js"></script>
+  <script type="text/javascript" src="/js/filters.js"></script>
 </body>
 </html>

@@ -58,7 +58,7 @@
 
     <div>
       <h2>Movies</h2>
-      <ul ng-repeat="movie in movies">
+      <ul ng-repeat="movie in movies | filter:year=1983">
         <li>
           Title: {{movie.title}}
         </li>

@@ -10,15 +10,16 @@
       };
 
       //injectable service step
-      this.$get = function(){//this is the factory inside the provider
+      this.$get = ['$http',
+      function($http){//this is the factory inside the provider
 
         return {
           getMovies : function(){
-            return "WOOT" + endpoint;
+            return $http.get(endpoint);
           }
         };
 
-      };
+      }];
 
     }]);
 })();

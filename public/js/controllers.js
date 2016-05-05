@@ -10,7 +10,9 @@
     'CharacterVersionFactory',
     'BookService',
     'Movies',
-    function($scope, MainCharacter, CharacterVersionFactory, BookService, Movies){
+    function($scope, MainCharacter,
+      CharacterVersionFactory, BookService,
+      Movies){
     //attach model to scope
     $scope.myFirstName = 'Owen';
 
@@ -22,7 +24,10 @@
 
     $scope.BookService = BookService;
 
-    console.log(Movies.getMovies());
+    $scope.movies = [];
+    Movies.getMovies().then(function(response){
+      $scope.movies = response.data;
+    });
 
   }]);
 })();

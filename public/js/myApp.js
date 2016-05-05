@@ -12,7 +12,9 @@
       //configuration
       MoviesProvider.setEndpoint('/api/movies');
     }])
-    .run(['$rootScope', 'APP_VERSION', function($rootScope, APP_VERSION){
+    .run(['$rootScope',
+      'APP_VERSION',
+      function($rootScope, APP_VERSION){
       //initialize
 
       //rootScope is the global scope.

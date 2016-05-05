@@ -56,6 +56,18 @@
       </div>
     </fieldset>
 
+    <div>
+      <h2>Movies</h2>
+      <ul ng-repeat="movie in movies">
+        <li>
+          Title: {{movie.title}}
+        </li>
+        <li>
+          Year: {{movie.year}}
+        </li>
+      </ul>
+    </div>
+
   </div>
 
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
